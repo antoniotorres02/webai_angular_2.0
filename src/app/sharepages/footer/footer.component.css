@@ -1,0 +1,24 @@
+footer {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px;
+  min-height: 100px;
+  background-color: #1f1719;
+  justify-items: center;
+}
+
+footer h1 {
+  font-family: "Liberation Sans";
+  font-size: 80px;
+  color: white;
+}
+
+footer ul li a {
+  color: white;
+  font-family: "Liberation Sans", serif;
+}
+
+footer ul li {
+  margin: 20px;
+}

@@ -1,0 +1,12 @@
+<div>
+  <form (submit)="onSubmit(signinForm)" #signinForm="ngForm" name="signin-form">
+    <p>Email</p>
+    <input type="email" name="email" ngModel required />
+    <p>Password</p>
+    <input type="password" name="password" ngModel required />
+    <button type="submit" id="signin-button">Sign In</button>
+    <p>Or sign in with:</p>
+    <button (click)="loginWithGoogle()" id="google-login-button">Google</button>
+    <p>Don't have an account? <a routerLink="/sign-up">Sign Up</a></p>
+  </form>
+</div>
