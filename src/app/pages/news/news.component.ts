@@ -10,6 +10,7 @@ import {New} from "../../interfaces/news";
 export class NewsComponent {
 
   news: New[] = []
+  lastSpan: number = 0
 
   constructor(private newsService: NewsService) {
 
@@ -20,4 +21,10 @@ export class NewsComponent {
       this.news = data
     })
   }
+
+  randomSpanning(): String {
+    let span = Math.floor(Math.random() * 10) % 4 + 5
+    return `span ${span}`
+  }
+
 }
