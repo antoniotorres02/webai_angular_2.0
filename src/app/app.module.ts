@@ -46,6 +46,8 @@ import {Firestore, getFirestore, provideFirestore} from "@angular/fire/firestore
       {path: 'profile', component: ProfileComponent},
       {path: 'news', component: NewsComponent},
       {path: 'new/:id', component: NewComponent},
+      {path: 'person/:id', component: PersonComponent},
+      {path: 'who', component: WhoComponent},
     ]),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),

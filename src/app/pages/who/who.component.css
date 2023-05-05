@@ -1,0 +1,16 @@
+.who_frame {
+  width: 200px;
+  height: 200px;
+}
+.who_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+.who_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}

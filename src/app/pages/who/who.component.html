@@ -1,1 +1,10 @@
-<p>who works!</p>
+<main>
+  <div class="who_frame" *ngFor="let who of whos" routerLink="/person/{{who.id}}">
+    <div class="who_img">
+      <img src="{{who.img}}" alt="">
+    </div>
+    <div class="who_name">
+      <h3>{{who.name}}</h3>
+    </div>
+  </div>
+</main>

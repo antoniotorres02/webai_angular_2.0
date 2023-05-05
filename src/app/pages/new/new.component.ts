@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {NewsService} from "../../services/news.service";
 import {New} from "../../interfaces/news";
+import {NodeWithI18n} from "@angular/compiler";
 
 @Component({
   selector: 'app-new',
@@ -9,7 +10,7 @@ import {New} from "../../interfaces/news";
   styleUrls: ['./new.component.css']
 })
 export class NewComponent {
-  newId: String = '';
+  newId: number = 0;
   new: New = {
     id: 0,
     title: '',
@@ -21,7 +22,9 @@ export class NewComponent {
   }
 
   ngOnInit(): void {
-    this.newId = this.route.snapshot.paramMap.get('id')!;
-    this.new = this.newsService.getNewById(this.newId)
+    this.newId = parseInt(this.route.snapshot.paramMap.get('id') || '0' );
+    this.newsService.getNews().subscribe(data => {
+      this.new = data.filter(newItem => newItem.id == this.newId)[0]
+      })
   }
 }
