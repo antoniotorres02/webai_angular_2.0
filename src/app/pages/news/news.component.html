@@ -1,5 +1,5 @@
 <main>
-  <div class="news_frame" *ngFor="let new of news" [style.grid-row]=randomSpanning()>
+  <div class="news_frame" *ngFor="let new of news" [style.grid-row]=randomSpanning() routerLink="/new/{{new.id}}">
     <div class="news_img" >
       <img src="{{new.img}}" alt="">
     </div>

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { collection, collectionData, Firestore } from "@angular/fire/firestore";
+import {collection, collectionData, doc, Firestore, getDocs} from "@angular/fire/firestore";
 import { Observable } from "rxjs";
 import {New} from "../interfaces/news";
 
@@ -17,4 +17,9 @@ export class NewsService {
     const newsCollectionRef = collection(this.firestore, 'news')
     return collectionData(newsCollectionRef, {idField: 'id'}) as Observable<New[]>;
   }
+
+  getNewById(newId: String): New {
+    return null as unknown as New;
+  }
 }
+

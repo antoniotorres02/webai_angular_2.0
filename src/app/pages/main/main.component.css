@@ -1,12 +1,8 @@
 #main_content {
   display: grid;
   background: url("/assets/img/logo_blur.png") no-repeat center center fixed;
-  height: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  padding-left: 20%;
-  padding-right: 20%;
-  align-items: center;
+  min-height: 100vh;
+  grid-auto-flow: column;
   justify-items: center;
 }
 
@@ -27,3 +23,82 @@
   color: white;
   font-size: 3em;
 }
+
+#buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin: 50px;
+}
+
+button {
+  margin: 50px;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+}
+
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 1025px) {
+  #main_content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #buttons {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  #main_content button {
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 0px;
+  }
+
+}
+
+
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #main_content {
+    grid-auto-flow: row;
+    justify-items: center;
+  }
+
+  #buttons {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
+  #main_content button {
+    justify-self: center;
+    height: 200px;
+    width: 200px;
+  }
+
+  #main_content button h1 {
+    font-size: 2em;
+  }
+
+  #who_button {
+    grid-column: span 2;
+  }
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
