@@ -1,4 +1,15 @@
-<div class="profile-container">
-  <h1>Helo, {{ userEmail }}</h1>
-  <button class="logout-button" (click)="logout()">Log Out</button>
+<div *ngIf="userProfile" class="profile-container">
+  <div class="image-container">
+    <img [src]="userProfile.img" alt="Profile image" class="profile-image"/>
+  </div>
+  <h2 class="email">{{ user?.email }}</h2>
+  <div class="bio-container">
+    <p>{{ userProfile.bio }}</p>
+    <button (click)="editBio()" *ngIf="!editingBio">Editar</button>
+    <div *ngIf="editingBio">
+      <textarea [(ngModel)]="newBio" rows="4" cols="50"></textarea>
+      <button (click)="saveBio()">Guardar</button>
+      <button (click)="cancelEditing()">Cancelar</button>
+    </div>
+  </div>
 </div>
