@@ -9,7 +9,7 @@ main {
 }
 
 .news_frame {
-  background-color: gray;
+  background-color: rgba(58, 42, 44, 0.39);
   border-radius: 10px;
   padding: 30px;
   animation: news_frame 0.5s;
@@ -53,3 +53,14 @@ main {
   transform: scale(1.1);
 }
 
+.news_text h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  transition: all 0.3s;
+}
+
+.news_frame:hover .news_text h3 {
+  transform: translate(0, -10px) scale(1.1);
+}
