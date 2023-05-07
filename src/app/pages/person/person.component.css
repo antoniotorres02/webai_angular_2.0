@@ -1,0 +1,106 @@
+main {
+  min-height: 100vh;
+  padding: 40px;
+  display: grid;
+  background: url("/assets/img/logo_blur.png") no-repeat center center fixed;
+}
+
+#profile_frame {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 50px;
+  border-radius: 10px;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  min-height: 100vh;
+}
+
+#profile_picture_name {
+  max-width: 600px;
+  height: fit-content;
+  display: grid;
+  padding: 50px;
+  grid-gap: 20px;
+  grid-template-rows: 300px 100px;
+  grid-template-columns: 1fr;
+  background-color: rgba(58, 42, 44, 0.37);
+  justify-items: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: black 0px 0px 10px;
+  transition: transform 0.5s, box-shadow 0.5s;
+  grid-row: span 3;
+}
+
+#profile_picture_name img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: black 0px 0px 10px;
+}
+
+
+#profile_picture_name h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  position: relative;
+  z-index: 1;
+  top: 0;
+}
+
+#profile_picture_name p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  position: relative;
+  z-index: 1;
+  top: 0;
+  background-color: rgba(58, 42, 44, 0.23);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+
+#profile_picture_name:hover {
+  box-shadow: black 0px 0px 20px;
+}
+
+.article {
+  max-width: 600px;
+  background-color: rgba(58, 42, 44, 0.37);
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: black 0px 0px 10px;
+  transition: transform 0.5s, box-shadow 0.5s;
+  display: grid;
+}
+
+.article h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  position: relative;
+  z-index: 1;
+  top: 0;
+  margin-bottom: 20px;
+}
+
+.article p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  position: relative;
+  z-index: 1;
+  top: 0;
+  background-color: rgba(58, 42, 44, 0.23);
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.article:hover {
+  box-shadow: black 0px 0px 20px;
+}
